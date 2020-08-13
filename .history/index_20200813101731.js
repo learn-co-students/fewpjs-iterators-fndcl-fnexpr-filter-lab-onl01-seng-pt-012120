@@ -8,11 +8,17 @@ let findMatching = (drivers,driver) => {
 };
 
 let fuzzyMatch = (drivers,driver) => {
-    return drivers.filter(d => {
-        return d.toLowerCase().indexOf(driver.toLowerCase()) !== -1 && d.toLowerCase().indexOf(driver.toLowerCase()) < driver.length;
-    });
+    // if (driver.length>1) {
+        let r = drivers.filter(d => {
+            // debugger;
+            return d.toLowerCase().indexOf(driver.toLowerCase()) !== - 1;
+        });
+        return r;
+    // } else {
+    //     return [];
+    // }
 };
 
 let matchName = (drivers,driver) => {
-    return drivers.filter(d => {return d.name === driver});
+    
 };
